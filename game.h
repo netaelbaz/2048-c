@@ -21,7 +21,7 @@ void startGame(int* isGameStarted, int* board, int size, int* freeCells);
 
 void resetGame(int* board, int size);
 
-void sumTwoNumbers(int* board, int index1, int index2, int* freeCells, int* score);
+void merge(int* board, int index1, int index2, int* freeCells, int* score);
 
 void sumAllTwoSameNumbersUp(int* board, int size, int* freeCells, int* score);
 
@@ -31,28 +31,20 @@ void sumAllTwoSameNumbersRight(int* board, int size, int* freeCells, int* score)
 
 void sumAllTwoSameNumbersLeft(int* board, int size, int* freeCells, int* score);
 
-void moveNumbersrightLeft(int* board, int size, int start, int end, int step);
+void moveNumbersRightLeft(int* board, int size, int start, int end, int step);
 
 void moveNumbersUpDown(int* board, int size, int start, int end, int step);
 
-int checkCanMoveRight(int* mat, int size);
+int checkCanMoveRightLeft(int* board, int size, int start, int end, int step);
 
-int checkCanMoveLeft(int* mat, int size);
+int checkCanMoveDownUp(int* board, int size, int start, int end, int step);
 
-int checkCanMoveUp(int* mat, int size);
+void handleDown(int* board, int size, int* freeCells, int* score);
 
-int checkCanMoveDown(int* mat, int size);
+void handleUp(int* board, int size, int* freeCells, int* score);
 
-// int checkCanMoveRightLeft(int* board, int size, int start, int end, int step);
+void handleRight(int* board, int size, int* freeCells, int* score);
 
-// int checkCanMoveDownUp(int* board, int size, int start, int end, int step);
-
-void moveDown(int* board, int size, int* freeCells, int* score);
-
-void moveUp(int* board, int size, int* freeCells, int* score);
-
-void moveRight(int* board, int size, int* freeCells, int* score);
-
-void moveLeft(int* board, int size, int* freeCells, int* score);
+void handleLeft(int* board, int size, int* freeCells, int* score);
 
 #endif
